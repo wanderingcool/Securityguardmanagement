@@ -15,14 +15,6 @@ interface Props {
 export default function AdminView({ onSwitchToGuard }: Props) {
   const [section, setSection] = useState<AdminSection>('dashboard');
 
-  const sectionTitles: Record<AdminSection, string> = {
-    dashboard: 'Live Dashboard',
-    sites: 'Site Management',
-    alerts: 'Alerts Feed',
-    users: 'User Management',
-    reports: 'Reports',
-  };
-
   return (
     <div className="flex h-screen bg-slate-100 overflow-hidden">
       <Sidebar active={section} onSelect={setSection} onSwitchToGuard={onSwitchToGuard} />
